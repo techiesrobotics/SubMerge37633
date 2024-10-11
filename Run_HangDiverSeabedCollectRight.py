@@ -16,15 +16,16 @@ def main():
 def hangDiver():
     SetSpeed(400)
     MoveForward(760)
-    TurnRight(38)
-    MoveRightArmDown(200, 58)
+    TurnRight(36)
+    MoveRightArmDown(200, 56)
     MoveForward(100)
 
     MoveRightArmDown(200, 17)
+    wait(30)
     MoveBackward(130)
 
 def seabedSample():
-    TurnRight(52)
+    TurnRight(54)
     MoveRightArmDown(200, 17)
     MoveForward(500)
     TurnLeft(90)
@@ -41,10 +42,10 @@ def collectRight():
     MoveForward(40)
     MoveLeftArmDown(200, 110)
     MoveBackward(30)
-    TurnRight(90)
+    TurnRight(95)
     MoveForward(360)
-    TurnLeft(30)
-    MoveForward(340)
+    TurnLeft(50)
+    MoveForward(530)
 
 #####Not Used ########
 def RaiseSharedMission():

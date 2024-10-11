@@ -12,7 +12,7 @@ hub = PrimeHub()
 
 left_motor = Motor(Port.C, Direction.COUNTERCLOCKWISE)
 right_motor = Motor(Port.D)
-
+#sensor a left motor e right motor f left c right d
 #color_sensor = ColorSensor(Port.E)
 
 drive_base = DriveBase(left_motor, right_motor, wheel_diameter=56, axle_track=110)
@@ -52,6 +52,7 @@ PauseMission()
 TurnLeft(90)
 '''
 #TurnRight(90)
+#TurnLeft(90)
 
 #MoveBackward(140)
 
