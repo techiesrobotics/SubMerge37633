@@ -1,3 +1,8 @@
+###################################
+#         For team 37633          # 
+# Run_HangDiverSeabedCollectRight #
+###################################
+
 from pybricks.hubs import PrimeHub
 from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSensor
 from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
@@ -8,25 +13,25 @@ from TechiesArm import *
 
 hub = PrimeHub()
 
-def main():
+def Do_HangDiverSeabedCollectRight():
     hangDiver()
     seabedSample()
     collectRight()
 
 def hangDiver():
     SetSpeed(400)
-    MoveForward(760)
-    TurnRight(36)
-    MoveRightArmDown(200, 56)
+    MoveForward(735)
+    TurnRight(35)
+    #MoveRightArmDown(200, 56)
     MoveForward(100)
 
-    MoveRightArmDown(200, 17)
+    MoveRightArmDown(200, 12)
     wait(30)
     MoveBackward(130)
 
 def seabedSample():
     TurnRight(54)
-    MoveRightArmDown(200, 17)
+    #MoveRightArmDown(200, 10)
     MoveForward(500)
     TurnLeft(90)
     MoveForward(80)
@@ -61,4 +66,4 @@ def RaiseSharedMission():
     MoveLeftArmUp(200, 100)
     #################
 
-main()
+#Do_HangDiverSeabedCollectRight()

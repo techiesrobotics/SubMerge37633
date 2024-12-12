@@ -1,14 +1,15 @@
-from pybricks.hubs import PrimeHub
-from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSensor
-from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
-from pybricks.robotics import DriveBase
-from pybricks.tools import wait, StopWatch
+##########################
+#     For team 37633     # 
+# Run_BudsDiverSharkReef #
+##########################
+
 from TechiesDriveBase import *
 from TechiesArm import *
 
 hub = PrimeHub()
 
-def main():
+def Do_BudsDiverSharkReef():
+    #SetAccel(650, 650)
     coralBudsAndDiver()
     shark()
     coralReef()
@@ -18,11 +19,16 @@ def coralBudsAndDiver():
     ######do Coral Buds ######
     SetSpeed(500)
     # coral buds mission #
-    MoveForward(635)  
+    MoveForward(620)  
     TurnLeft(90)    
-    MoveRightArmDown(150, 67)
-    MoveForward(90)
-    MoveRightArmUp(150, 35)
+    
+    MoveRightArmDown(160, 70)
+    MoveLeftArmUp(160, 95)
+    MoveForward(170)
+    MoveLeftArmDown(60, 160)
+    MoveLeftArmUp(100, 30)
+    DetectArmStall(right_arm, 80, 30, 80) #
+    #MoveRightArmUp(150, 30)
     MoveBackward(170)
 
 # shark mission  #
@@ -35,12 +41,13 @@ def shark():
 def coralReef():
     TurnRight(44)
     SetGyro(False)
-    MoveForward(460)
+    MoveForward(460) 
     SetGyro(True)
     SetSpeed(500)
     #MoveBackward(220)
-    MoveBackward(200)
-    TurnRight(15)
-    MoveBackward(700)
+    MoveBackward(1000)
 
-main()
+#Do_BudsDiverSharkReef()
+
+
+
