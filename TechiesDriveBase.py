@@ -4,7 +4,7 @@
 ##########################
 
 from pybricks.hubs import PrimeHub
-from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSensor
+from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor
 from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
 from pybricks.robotics import DriveBase
 from pybricks.tools import wait, StopWatch
@@ -18,10 +18,6 @@ color_sensor_side = ColorSensor(Port.B)
 
 drive_base = DriveBase(left_motor, right_motor, wheel_diameter=56, axle_track=110)
 drive_base.use_gyro(True)
-
-def IsForceSensorPressed():
-    force = ForceSensor(Port.B)
-    return force.pressed()
 
 def SetGyro(truefalse):
     drive_base.use_gyro(truefalse)
@@ -71,4 +67,3 @@ def MoveForwardWithSuddenStop(distance):
         print(drive_base.distance())
         wait(20)
     drive_base.straight(0)
-
