@@ -9,6 +9,7 @@ from Run_BudsDiverSharkReef import *
 from Run_HangDiverSeabedCollectRight import *
 from shippinglanes_octo_segments import *
 from sonar_submersible_fish import *
+from Run_TridentShark import *
 
 ORANGE_HIGH = 20
 ORANGE_LOW = 1
@@ -35,24 +36,24 @@ while True:
     # Do_MastAndHangTree
     if(detectedColor == Color.GREEN):
         print("==============DarkGreen, Do_CollectLeftTree")
-        #Do_CollectLeftTree()
+        Do_CollectLeftTree()
     
     elif detectedColor == Color.YELLOW:  # TODO need to test
         #if(detectedHSV.h > LIGHT_GREEN_LOW and detectedHSV.h < LIGHT_GREEN_HIGH):
             print("==============YELLOW, Do_HangDiverSeabedCollectRight")
-            #Do_HangDiverSeabedCollectRight()
+            Do_HangDiverSeabedCollectRight()
 
-    elif detectedColor == Color.WHITE:  # TODO need to test
+    elif detectedColor == Color.WHITE:  # TODO Need to use a different color
             print("==============YELLOW, Do_MastHangTree")
-            #Do_MastHangTree()
+            Do_MastHangTree()
 
     elif detectedColor == Color.RED:
         if(detectedHSV.h > RED_LOW and detectedHSV.h < RED_HIGH):
             print("==============RED, Do_BudsDiverSharkReef")
-            #Do_BudsDiverSharkReef()
+            Do_BudsDiverSharkReef()
         elif(detectedHSV.h > ORANGE_LOW and detectedHSV.h < ORANGE_HIGH): #TODO
             print("==============ORANGE, Run_TridentShark")
-            #Add the run for Trident and deliver Shark
+            tridentshark()
         elif(detectedHSV.h > MAGENTA_LOW and detectedHSV.h < MAGENTA_HIGH): #TODO
             print("==============MAGENTA, Run_Habitat & sample to boat")
             #Add the run for the Artificial Habitat
