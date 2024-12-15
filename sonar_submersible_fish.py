@@ -23,7 +23,7 @@ def submersible():
     MoveBackward(100) #110
     TurnLeft(30)
     MoveRightArmDown(450, 90)
-    move_and_leftdown(250, 450, 210, 120)
+    move_and_leftdown(230, 450, 210, 120)
     TurnRight(45)
     MoveForward(40)
     wait(10)
@@ -43,28 +43,12 @@ def fish():
     wait(10)
     MoveBackward(140)
 
-sonar()
-submersible()
-fish()
-
-    #wait(50)
-    #SetSpeed(290) #didn't have
-    #TurnRight(45) #50  
-    #MoveLeftArmDown(210, 120)
-    #wait(10)
-    #wait(350)
-    #MoveLeftArmUp(500, 120)  #130
-
-
-
-
-'''
 def octo():
-    TurnRight(90)
-    MoveBackward(170)
-
-sonar()
-submersible()
-fish()
-octo()
-'''
+    TurnRight(60)
+    MoveBackward(111)
+    
+def sonar_submersible_fish():
+    sonar()
+    submersible()
+    fish()
+    octo()
