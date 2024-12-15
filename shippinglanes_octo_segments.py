@@ -4,7 +4,7 @@ hub = PrimeHub()
 
 def shippinglanes():
     SetSpeed(580)
-    MoveForward(400)#415 with 2 wheels
+    MoveForward(415)#415 with 2 wheels
     wait(8)
     TurnRight(30)
     MoveForward(80) #60 with 2 wheels
@@ -18,6 +18,7 @@ def unexpectedencounter():
     wait(5)
     MoveBackward(60) #70 with 2 wheels
     MoveForward(460)
+    SetGyro(False)
 
 def coralsegments():
     PauseMission()
@@ -25,8 +26,12 @@ def coralsegments():
     MoveForward(40)
     MoveBackward(120)
 
-shippinglanes()
-unexpectedencounter()
-coralsegments()
+def shippinglanes_octo_segments():
+    shippinglanes()
+    unexpectedencounter()
+    coralsegments()
+
+
+
 
 
