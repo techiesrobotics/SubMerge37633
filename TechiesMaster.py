@@ -7,8 +7,8 @@ from Run_CollectLeftTree import * #x
 from Run_MastHangTree import *
 from Run_BudsDiverSharkReef import *
 from Run_HangDiverSeabedCollectRight import *
-from Run_shippinglanes_octo_segments import *
-from Run_sonar_submersible_fish import *
+from shippinglanes_octo_segments import *
+from sonar_submersible_fish import *
 
 ORANGE_HIGH = 20
 ORANGE_LOW = 1
@@ -16,9 +16,9 @@ RED_HIGH = 365
 RED_LOW = 349
 MAGENTA_HIGH = 342
 MAGENTA_LOW = 330
-BLUE_HIGH = 225
+BLUE_HIGH = 220
 BLUE_LOW = 210
-PURPLE_HIGH = 250
+PURPLE_HIGH = 248
 PURPLE_LOW = 230
 DARK_GREEN_HIGH = 165
 DARK_GREEN_LOW = 145
@@ -33,8 +33,7 @@ while True:
 
     #TODO:  when to run the mask mission?  
     # Do_MastAndHangTree
-    if(detectedColor == Color.GREEN)
-        #detectedHSV.h > DARK_GREEN_LOW and detectedHSV.h < DARK_GREEN_HIGH):
+    if(detectedColor == Color.GREEN):
         print("==============DarkGreen, Do_CollectLeftTree")
         #Do_CollectLeftTree()
     
@@ -65,10 +64,10 @@ while True:
     elif detectedColor == Color.BLUE:
         if(detectedHSV.h > BLUE_LOW and detectedHSV.h < BLUE_HIGH):
             print("==============BLUE, shippinglanes_octo_segments")
-            #shippinglanes_octo_segments() #TODO add pause mission inbetween
+            shippinglanes_octo_segments() #TODO add pause mission inbetween
         if(detectedHSV.h > PURPLE_LOW and detectedHSV.h < PURPLE_HIGH):
             print("==============PURPLE, sonar_submersible_fish")
-            #sonar_submersible_fish()
+            sonar_submersible_fish()
         else:
             print("========================================too close to tell")
     wait(100)
@@ -77,3 +76,4 @@ while True:
         print(color_sensor_side.color())
 '''
         
+
