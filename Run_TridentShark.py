@@ -27,4 +27,4 @@ def tridentshark():
     SetSpeed(900)
     MoveBackward(660)
 
-tridentshark()
+#tridentshark()
