@@ -80,3 +80,4 @@ def determineColor():
 >>>>>>> Stashed changes
 
 determineColor()
+
