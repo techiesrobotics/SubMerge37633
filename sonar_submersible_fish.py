@@ -18,7 +18,7 @@ def sonar():
     MoveBackward(190)
 
 def submersible():
-    
+    drive_base.reset
     TurnRight(30)
     MoveBackward(100) #110
     TurnLeft(30)
@@ -29,7 +29,7 @@ def submersible():
     wait(10)
     StopAtWhite(290)
     MoveLeftArmUp(500, 100)
-    DetectArmStall(left_arm, 150, -15, 70)
+    DetectArmStall(left_arm, 150, -15, 60)
 
 def fish():
     MoveBackward(280) #320
@@ -44,11 +44,12 @@ def fish():
     MoveBackward(140)
 
 def octo():
-    TurnRight(60)
-    MoveBackward(111)
+    TurnRight(90)
+    MoveBackward(131)
     
 def sonar_submersible_fish():
     sonar()
     submersible()
     fish()
     octo()
+
