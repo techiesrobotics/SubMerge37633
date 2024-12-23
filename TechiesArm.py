@@ -3,6 +3,7 @@ from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSenso
 from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
 from pybricks.robotics import DriveBase
 from pybricks.tools import wait, StopWatch, multitask, run_task
+from TechiesArm import *
 
 left_arm = Motor(Port.A)
 right_arm = Motor(Port.F, Direction.COUNTERCLOCKWISE)
@@ -41,7 +42,7 @@ def DetectArmStall(arm, speed, angle, maxLoad):
         else:
             break
     arm.hold()
-
+#DetectArmStall(left_arm,150,90,40)
 #MoveLeftArmUp(100, 90)
 #MoveLeftArmDown(100, 90)
 
@@ -49,5 +50,4 @@ def DetectArmStall(arm, speed, angle, maxLoad):
 #MoveRightArmDown(100,90)
 
 #run_task(moveBothArmUp(100, 90))
-
 
