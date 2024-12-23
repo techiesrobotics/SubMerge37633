@@ -1,10 +1,8 @@
 from TechiesDriveBase import *
-from TechiesArm import *
-hub = PrimeHub()
 
 def shippinglanes():
     SetSpeed(580)
-    MoveForward(415)#415 with 2 wheels
+    MoveForward(400)#415 with 2 wheels
     wait(8)
     TurnRight(30)
     MoveForward(80) #60 with 2 wheels
@@ -30,11 +28,3 @@ def shippinglanes_octo_segments():
     shippinglanes()
     unexpectedencounter()
     coralsegments()
-
-
-
-
-
-
-
-
