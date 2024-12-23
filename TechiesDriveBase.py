@@ -3,6 +3,7 @@ from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor
 from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
 from pybricks.robotics import DriveBase
 from pybricks.tools import wait, StopWatch
+from TechiesArm import *
 
 hub = PrimeHub()
 
@@ -21,13 +22,13 @@ def SetSpeed(speed):
     drive_base.settings(straight_speed=speed)
 
 def SetAccel(accelStraight, accelTurn):
-    drive_base.settings(straight_acceleration=accelStraight, turn_acceleration=400)
+    drive_base.settings(straight_acceleration=accelStraight, turn_acceleration=accelTurn)
 
 def MoveForward(distance):
     drive_base.straight(distance)
 
 def MoveForwardWithAccel(distance, accelStraight, accelTurn):
-    drive_base.settings(straight_acceleration=accelStraight, turn_acceleration=400)
+    drive_base.settings(straight_acceleration=accelStraight, turn_acceleration=accelTurn)
     drive_base.straight(distance)
 
 def MoveBackward(distance):
@@ -63,8 +64,14 @@ def MoveForwardWithSuddenStop(distance):
         wait(20)
     drive_base.straight(0)
 
-def move_and_leftdown(robot_distance, SetSpeed, armspeed, angle):
-    left_motor.run(SetSpeed) 
-    right_motor.run(SetSpeed) 
-    left_arm.run_target(armspeed, -1 * angle)
-    MoveForward(robot_distance)
+async def moveArmUp(arm, speed, angle):
+    await arm.run_angle(speed, angle)
+   
+async def moveArmDown(arm, speed, angle):
+    await arm.run_angle(speed, -1 * angle)
+
+async def MoveForward_As(distance):
+    await drive_base.straight(distance)
+
+async def DriveForwardAndMoveArm(distance, arm, armSpeed, angle):
+    await multitask(MoveForward_As(distance), moveArmUp(left_arm, armSpeed, angle))
