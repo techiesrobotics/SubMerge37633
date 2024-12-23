@@ -4,9 +4,6 @@
 ##########################
 
 from TechiesDriveBase import *
-from TechiesArm import *
-
-hub = PrimeHub()
 
 def sonar():
     SetSpeed(450)
@@ -18,38 +15,39 @@ def sonar():
     MoveBackward(190)
 
 def submersible():
-    drive_base.reset
     TurnRight(30)
     MoveBackward(100) #110
     TurnLeft(30)
     MoveRightArmDown(450, 90)
-    move_and_leftdown(230, 450, 210, 120)
+    run_task(DriveForwardAndMoveArm(230, left_arm, 210, 100))
     TurnRight(45)
     MoveForward(40)
     wait(10)
     StopAtWhite(290)
-    MoveLeftArmUp(500, 100)
-    DetectArmStall(left_arm, 150, -15, 60)
+    #MoveLeftArmUp(500, 100)
+    DetectArmStall(left_arm, 500, 100, 40)# The old angle was -15, TODO
+    print(left_arm.load())
 
 def fish():
     MoveBackward(280) #320
     TurnLeft(53)
     SetSpeed(330) #350
-    MoveForward(500)
+    MoveForwardWithAccel(500, 1200, 1200)
     TurnLeft(25)
     MoveForward(135)
     TurnLeft(35)
-    MoveForward(90)
+    MoveForwardWithAccel(90, 1200, 1200)
     wait(10)
     MoveBackward(140)
 
 def octo():
     TurnRight(90)
-    MoveBackward(131)
+    MoveBackward(180)
     
 def sonar_submersible_fish():
     sonar()
     submersible()
     fish()
     octo()
+
 
