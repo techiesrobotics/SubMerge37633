@@ -3,9 +3,10 @@
 #         Master         #
 ##########################
 from TechiesDriveBase import *
+from TechiesArm import *
+from Run_MastDiverReefShark import *
 from Run_CollectLeftTree import * #x
-from Run_MastHangTree import *
-from Run_BudsDiverSharkReef import *
+from Run_BudsDiver import *
 from Run_HangDiverSeabedCollectRight import *
 from shippinglanes_octo_segments import *
 from sonar_submersible_fish import *
@@ -45,14 +46,14 @@ while True:
 
     elif detectedColor == Color.RED:
         if(detectedHSV.h > RED_LOW and detectedHSV.h < RED_HIGH):
-            print("==============RED, Do_BudsDiverSharkReef")
-            Do_BudsDiverSharkReef()
+            print("==============RED, Do_BudsDiver")
+            Do_BudsDiver()
         elif(detectedHSV.h > ORANGE_LOW and detectedHSV.h < ORANGE_HIGH): #TODO
             print("==============ORANGE, Run_TridentShark")
             tridentshark()
         elif(detectedHSV.h > MAGENTA_LOW and detectedHSV.h < MAGENTA_HIGH): #TODO
             print("==============MAGENTA, Run_Habitat & sample to boat")
-            #Add the run for the Artificial Habitat & dump sample to boat
+            MoveRightArmDown(100, 90)
         else:
             print("Not Orange, Red, or Magenta")
             print(color_sensor_side.color())
@@ -64,8 +65,8 @@ while True:
     # right side runs + replace white to run mastHangTree
     elif detectedColor == Color.BLUE:
         if(detectedHSV.h > LIGHT_BLUE_LOW and detectedHSV.h < LIGHT_BLUE_HIGH):
-            print("==============light blue, Do_MastAndHangTree")
-            Do_MastAndHangTree()
+            print("==============light blue, Do_MastDiverReefShark")
+            Do_MastDiverReefShark()
         elif(detectedHSV.h > BLUE_LOW and detectedHSV.h < BLUE_HIGH):
             print("==============BLUE, shippinglanes_octo_segments")
             shippinglanes_octo_segments() #TODO add pause mission inbetween
