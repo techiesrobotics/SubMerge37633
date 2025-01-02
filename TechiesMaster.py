@@ -1,6 +1,6 @@
 ###############################
 #        For team 37633       #
-#            Master           #
+#       TechiesMaster.py      #
 #  This file starts the runs  #
 ###############################
 from TechiesDriveBase import *
