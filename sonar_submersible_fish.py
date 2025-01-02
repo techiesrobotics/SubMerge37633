@@ -7,7 +7,6 @@ from TechiesDriveBase import *
 
 def sonar():
     SetSpeed(450)
-    #MoveForward(730) #740
     MoveForwardWithAccel(730, 300, 300)
     TurnLeft(90)
     MoveForward(245)
@@ -16,7 +15,7 @@ def sonar():
 
 def submersible():
     TurnRight(30)
-    MoveBackward(100) #110
+    MoveBackward(100)
     TurnLeft(30)
     MoveRightArmDown(450, 90)
     run_task(DriveForwardAndMoveArm(230, left_arm, 210, 100))
@@ -24,14 +23,13 @@ def submersible():
     MoveForward(40)
     wait(10)
     StopAtWhite(290)
-    #MoveLeftArmUp(500, 100)
     DetectArmStall(left_arm, 500, 100, 40)# The old angle was -15, TODO
     print(left_arm.load())
 
 def fish():
-    MoveBackward(280) #320
+    MoveBackward(280)
     TurnLeft(53)
-    SetSpeed(330) #350
+    SetSpeed(330)
     MoveForwardWithAccel(500, 1200, 1200)
     TurnLeft(25)
     MoveForward(135)
@@ -49,5 +47,3 @@ def sonar_submersible_fish():
     submersible()
     fish()
     octo()
-
-
