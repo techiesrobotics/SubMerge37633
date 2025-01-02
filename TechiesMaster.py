@@ -1,7 +1,8 @@
-##########################
-#     For team 37633     # 
-#         Master         #
-##########################
+###############################
+#        For team 37633       #
+#            Master           #
+#  This file starts the runs  #
+###############################
 from TechiesDriveBase import *
 from Run_MastKrakenReefDiver import *
 from Run_CollectLeft import * #x
