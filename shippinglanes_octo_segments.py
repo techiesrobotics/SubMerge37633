@@ -12,7 +12,7 @@ def shippinglanes():
     wait(100)
 
 def unexpectedencounter():
-    TurnRight(63) #75
+    TurnRight(63)
     wait(5)
     MoveBackward(60) #70 with 2 wheels
     MoveForward(460)
