@@ -9,9 +9,6 @@ from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
 from pybricks.robotics import DriveBase
 from pybricks.tools import wait, StopWatch
 from TechiesDriveBase import *
-from TechiesArm import *
-
-hub = PrimeHub()
 
 def Do_BudsDiverSharkReef():
     coralBudsAndDiver()
@@ -44,7 +41,6 @@ def coralReef():
     MoveForward(460)
     SetGyro(True)
     SetSpeed(500)
-    #MoveBackward(220)
     MoveBackward(210)
     TurnRight(15)
     MoveBackward(700)
