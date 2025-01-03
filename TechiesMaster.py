@@ -68,9 +68,7 @@ while True:
             shippinglanes_octo_segments()
         elif(detectedHSV.h > PURPLE_LOW and detectedHSV.h < PURPLE_HIGH):
             print("==============PURPLE, sonar_submersible_fish")
-            sonar_submersible_fish()
+            sonar_submersible_octo()
         else:
             print("======================too close to tell")
     wait(100)
-
-        
