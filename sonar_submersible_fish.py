@@ -22,7 +22,7 @@ def submersible():
     run_task(DriveForwardAndMoveArm(320, left_arm, 210, -135))
     TurnRight(45)
     MoveForward(55)
-    wait(10)
+    wait(5)
     StopAtWhite(290)
     #DetectArmStall(left_arm, 500, 1500, 40)# The old angle was -15, TODO
     MoveArmWithStallTimeDetection(left_arm, 500, 150)
@@ -38,6 +38,6 @@ def sonar_submersible_fish():
     submersible()
     octo()
 
-sonar_submersible_fish()
+
 
 
