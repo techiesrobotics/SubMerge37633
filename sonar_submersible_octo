@@ -19,7 +19,7 @@ def submersible():
     MoveBackward(100)
     TurnLeft(30)
     MoveRightArmDown(450, 90)
-    run_task(DriveForwardAndMoveArm(320, left_arm, 210, -135))
+    run_task(DriveForwardAndMoveArm(340, left_arm, 210, -135))
     TurnRight(45)
     MoveForward(55)
     wait(5)
@@ -33,8 +33,9 @@ def octo():
     TurnRight(100)
     MoveBackward(180)
    
-def sonar_submersible_fish():
+def sonar_submersible_octo():
     sonar()
     submersible()
     octo()
+
 
