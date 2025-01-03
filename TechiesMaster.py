@@ -10,6 +10,7 @@ from Run_BudsDiverSharkReef import *
 from Run_LeftToRight import *
 from shippinglanes_octo_segments import *
 from sonar_submersible_fish import *
+from sonar_submersible_octo import *
 
 RED_HIGH = 365
 RED_LOW = 349
