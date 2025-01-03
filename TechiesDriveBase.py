@@ -38,6 +38,9 @@ def MoveForwardWithAccel(distance, accelStraight, accelTurn):
     drive_base.settings(straight_acceleration=accelStraight, turn_acceleration=accelTurn)
     drive_base.straight(distance)
 
+def AccelDefaultReset():
+    drive_base.settings(straight_acceleration=733, turn_acceleration=763)
+
 def MoveBackward(distance):
     drive_base.straight(-1* distance)
 
@@ -82,3 +85,4 @@ async def MoveForward_As(distance):
 
 async def DriveForwardAndMoveArm(distance, arm, armSpeed, angle):
     await multitask(MoveForward_As(distance), moveArmUp(left_arm, armSpeed, angle))
+
