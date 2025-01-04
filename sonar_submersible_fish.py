@@ -5,7 +5,7 @@
 
 from TechiesDriveBase import *
 
-def sonar():
+def sonardiscovery():
     SetSpeed(450)
     MoveForwardWithAccel(730, 300, 300)
     TurnLeft(90)
@@ -13,20 +13,22 @@ def sonar():
     MoveRightArmUp(330, 215)
     MoveBackward(190)
 
-def submersible():
+def sendoversubmersible():
+    AccelDefaultReset()
     TurnRight(30)
     MoveBackward(100)
     TurnLeft(30)
     MoveRightArmDown(450, 90)
-    run_task(DriveForwardAndMoveArm(230, left_arm, 210, 100))
+    run_task(DriveForwardAndMoveArm(340, left_arm, 210, -135))
     TurnRight(45)
-    MoveForward(40)
-    wait(10)
+    MoveForward(55)
+    wait(5)
     StopAtWhite(290)
-    DetectArmStall(left_arm, 500, 100, 40)# The old angle was -15, TODO
+    #DetectArmStall(left_arm, 500, 1500, 40)# The old angle was -15, TODO
+    MoveArmWithStallTimeDetection(left_arm, 500, 150)
     print(left_arm.load())
 
-def fish():
+def anglerfish():
     MoveBackward(280)
     TurnLeft(53)
     SetSpeed(330)
@@ -38,15 +40,16 @@ def fish():
     wait(10)
     MoveBackward(140)
 
-def octo():
+def octopus():
     TurnRight(90)
     MoveBackward(180)
     
 def sonar_submersible_fish():
-    sonar()
-    submersible()
-    fish()
-    octo()
+    sonardiscovery()
+    sendoversubmersible()
+    anglerfish()
+    octopus()
+
 
 
 
