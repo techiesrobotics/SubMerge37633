@@ -23,7 +23,6 @@ def coralsegments():
     SetSpeed(100)
     MoveForward(40)
     MoveBackward(120)
-
 def shippinglanes_octo_segments():
     shippinglanes()
     unexpectedencounter()
