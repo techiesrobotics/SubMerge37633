@@ -13,9 +13,9 @@ from TechiesDriveBase import *
 def collectLeftPiece():
     #This function will collect the left side pieces
     SetSpeed(800)
-    MoveForward(470)
+    MoveForward(490)
     MoveLeftArmDown(500,90)
-    MoveBackward(620)
+    MoveBackward(650)
 
 # removed from run
 '''
