@@ -30,7 +30,7 @@ def mastKraken():
     '''
     
 def hangDiverandHitCoralReef(): # hang diver and hit coral bud
-    TurnRight(106)
+    TurnRight(104)
     MoveBackward(213)
     MoveRightArmUp(200, 8)
     SetSpeed(900)
@@ -53,3 +53,4 @@ def Do_MastKrakenReefDiver():
     #doShark()
     
 #Do_MastKrakenReefDiver()
+
