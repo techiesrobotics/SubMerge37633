@@ -33,12 +33,12 @@ def doAngler():
     TurnLeft(60)
     MoveForward(285)
     TurnLeft(85)
-    MoveForward(420)
-    TurnRight(80)
-    MoveForward(145)
-    TurnLeft(20)
+    MoveForward(450)
+    TurnRight(90)
+    MoveForward(160)
+    TurnLeft(30)
     SetGyro(False)
-    MoveForward(330)
+    MoveForward(360)
     SetGyro(True)
 
 def doSeabed():
@@ -47,12 +47,12 @@ def doSeabed():
     TurnRight(90)
 
 def doCollectRight():
-    MoveForward(875)
-    TurnRight(12)
+    MoveForward(885)
+    TurnRight(16)
     MoveLeftArmDown(200, 92)
-    MoveBackward(60)
+    MoveBackward(90)
     SetSpeed(700)
-    TurnRight(70)
+    TurnRight(80)
     SetSpeed(900)
     MoveForward(850)
 
