@@ -1,7 +1,7 @@
 from TechiesDriveBase import *
 
 def shippinglanes():
-    SetSpeed(580)
+    SetSpeed(900)
     MoveForward(400)#415 with 2 wheels
     wait(8)
     TurnRight(30)
@@ -23,7 +23,9 @@ def coralsegments():
     SetSpeed(100)
     MoveForward(40)
     MoveBackward(120)
+
 def shippinglanes_octo_segments():
     shippinglanes()
     unexpectedencounter()
     coralsegments()
+shippinglanes_octo_segments()
