@@ -18,7 +18,7 @@ def Run_LeftToRight():
 
 def doDeliverShark():
     SetSpeed(700)
-    MoveRightArmDown(200, 190)
+    MoveRightArmDown(200, 210)
     MoveForward(50)
     TurnRight(65)
     #MoveForwardWithAccel(600,800,800)
@@ -26,7 +26,7 @@ def doDeliverShark():
     SetSpeed(900)
     MoveBackward(250)
     SetSpeed(700)
-    TurnRight(22)
+    TurnRight(23)
 
 def doAngler():
     StopAtWhite(300)
@@ -35,11 +35,11 @@ def doAngler():
     MoveForward(285)
     TurnLeft(85)
     MoveForward(440)
-    TurnRight(105)
-    MoveForward(110)
-    TurnLeft(45)
+    TurnRight(110)
+    MoveForward(120)
+    TurnLeft(50)
     SetGyro(False)
-    MoveForward(330)
+    MoveForward(360)
     MoveBackward(20)
     SetGyro(True)
     
@@ -50,14 +50,14 @@ def doSeabed():
     TurnRight(90)
 
 def doCollectRight():
-    MoveForward(810)
-    TurnRight(10)
-    MoveLeftArmDown(200,86)
-    MoveForward(110)
-    MoveBackward(120)
+    MoveForward(850)
+    TurnRight(20)
+    MoveLeftArmDown(200,88)
+    MoveForward(20)
+    MoveBackward(180)
     MoveLeftArmUp(200, 92)
     SetSpeed(700)
-    TurnRight(75)
+    TurnRight(50)
     SetSpeed(900)
     MoveForward(850)
 
