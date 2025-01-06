@@ -21,7 +21,7 @@ def coralBudsAndDiver():
     # coral buds mission #
     MoveForward(635)  
     TurnLeft(90)    
-    MoveRightArmDown(150, 76)
+    MoveRightArmDown(150, 73)
     MoveForward(90)
     #DetectArmStall(right_arm, 120, 35, 90)
     #MoveRightArmUp(100, 20)
