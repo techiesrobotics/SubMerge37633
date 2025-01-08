@@ -13,6 +13,7 @@ from TechiesDriveBase import *
 def mastKraken():
     #This function completes the "Raising the Mast" and "Kraken's Treasure" Missions
     SetSpeed(900)
+    MoveRightArmDown(100 ,21)
     TurnRight(30)
     MoveForward(450)
     SetSpeed(100)
@@ -30,9 +31,9 @@ def mastKraken():
     '''
     
 def hangDiverandHitCoralReef(): # hang diver and hit coral bud
-    TurnRight(104)
+    TurnRight(102)
     MoveBackward(213)
-    MoveRightArmUp(200, 8)
+    MoveRightArmUp(200, 15)
     SetSpeed(900)
     TurnRight(23)
     MoveForward(810)
