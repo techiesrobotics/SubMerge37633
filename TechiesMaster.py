@@ -73,3 +73,6 @@ while True:
         else:
             print("======================too close to tell")
     wait(100)
+    elif(detectedHSV.h > LIGHT_BLUE_LOW and detectedHSV.h < LIGHT_BLUE_HIGH):
+            print("==============LIGHT_BLUE, submersible_octo")
+            submersible_octo()
