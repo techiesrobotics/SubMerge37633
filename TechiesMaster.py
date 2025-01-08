@@ -59,11 +59,9 @@ while True:
     elif detectedColor == Color.BLUE:
         # Pybricks's pre-defined colors mixes up blue, purple, light blue.
         # So we used the hue of the color to detect the colors more accurately.
-        '''
-        Light blue removed due to shortage of runs
         if(detectedHSV.h > LIGHT_BLUE_LOW and detectedHSV.h < LIGHT_BLUE_HIGH):
-            print("==============light blue, Do Nothing")
-        '''
+            print("==============LIGHT_BLUE, submersible_octo")
+            submersible_octo()
         if(detectedHSV.h > BLUE_LOW and detectedHSV.h < BLUE_HIGH):
             print("==============BLUE, shippinglanes_octo_segments")
             shippinglanes_octo_segments()
@@ -73,6 +71,3 @@ while True:
         else:
             print("======================too close to tell")
     wait(100)
-    elif(detectedHSV.h > LIGHT_BLUE_LOW and detectedHSV.h < LIGHT_BLUE_HIGH):
-            print("==============LIGHT_BLUE, submersible_octo")
-            submersible_octo()
