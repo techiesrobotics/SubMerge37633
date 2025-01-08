@@ -7,7 +7,7 @@ from TechiesDriveBase import *
 from Run_MastKrakenReefDiver import *
 from Run_CollectLeft import * #x
 from Run_BudsDiverSharkReef import *
-from Run_LeftToRight import *
+from Run_LeftToRight2 import *
 from shippinglanes_octo_segments import *
 from sonar_submersible_fish import *
 from sonar_submersible_octo import *
@@ -32,7 +32,7 @@ while True:
     #print(detectedColor, detectedHSV)
 
     if(detectedColor == Color.GREEN):
-        print("==============Green, Run_LeftToRight")
+        print("==============Green, Run_LeftToRight2")
         Run_LeftToRight()
 
     elif detectedColor == Color.RED:
