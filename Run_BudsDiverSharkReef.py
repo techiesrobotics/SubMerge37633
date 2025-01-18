@@ -25,7 +25,7 @@ def coralBudsAndDiver():
     MoveForward(90)
     #DetectArmStall(right_arm, 120, 35, 90)
     #MoveRightArmUp(100, 20)
-    MoveArmWithStallTimeDetection(right_arm, 90, 80)
+    DetectArmStall(right_arm, 70, 90, 70)
     MoveBackward(170)
 
 # shark mission  #
