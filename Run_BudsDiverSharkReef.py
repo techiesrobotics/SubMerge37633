@@ -19,7 +19,7 @@ def coralBudsAndDiver():
     ######do Coral Buds ######
     SetSpeed(500)
     # coral buds mission #
-    MoveForward(635)  
+    MoveForward(655)  
     TurnLeft(90)    
     MoveRightArmDown(150, 73)
     MoveForward(90)
