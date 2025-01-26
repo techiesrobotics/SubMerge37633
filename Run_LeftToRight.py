@@ -24,7 +24,7 @@ def doDeliverShark():
     #MoveForwardWithAccel(600,800,800)
     MoveForward(700)
     SetSpeed(900)
-    MoveBackward(250)
+    MoveBackward(310)
     SetSpeed(700)
     TurnRight(23)
 
@@ -46,18 +46,18 @@ def doAngler():
 
 def doSeabed():
     MoveRightArmUp(200, 70)
-    MoveBackward(175)
+    MoveBackward(200)
     TurnRight(90)
 
 def doCollectRight():
-    MoveForward(850)
-    TurnRight(20)
-    MoveLeftArmDown(200,88)
-    MoveForward(20)
-    MoveBackward(180)
+    MoveForward(830)
+    TurnRight(21)
+    MoveLeftArmDown(200,92)
+    MoveForward(25)
+    MoveBackward(120)
     MoveLeftArmUp(200, 92)
     SetSpeed(700)
-    TurnRight(50)
+    TurnRight(60)
     SetSpeed(900)
     MoveForward(850)
 
