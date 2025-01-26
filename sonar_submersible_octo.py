@@ -15,6 +15,7 @@ def sonar():
 
 def submersible():
     AccelDefaultReset()
+    SetSpeed(800)
     TurnRight(30)
     MoveBackward(100)
     TurnLeft(30)
@@ -37,3 +38,5 @@ def sonar_submersible_octo():
     sonar()
     submersible()
     octo()
+
+sonar_submersible_octo()
