@@ -38,5 +38,3 @@ def sonar_submersible_octo():
     sonar()
     submersible()
     octo()
-
-sonar_submersible_octo()
