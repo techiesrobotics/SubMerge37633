@@ -39,7 +39,7 @@ def MoveForwardWithAccel(distance, accelStraight, accelTurn):
     drive_base.straight(distance)
 
 def AccelDefaultReset():
-    drive_base.settings(straight_acceleration=733, turn_acceleration=763)
+    SetAccel(733,763)
 
 def MoveBackward(distance):
     drive_base.straight(-1* distance)
