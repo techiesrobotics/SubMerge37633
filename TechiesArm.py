@@ -61,12 +61,12 @@ def DetectArmStall(arm, speed, angle, maxLoad):
 # This function detects stall by starting a watch when the arm starts moving.
 # When the needed angle is reached or the watch reaches a specific time, the program continues.
 # The number for the watch is important because if it is too small, the arm won't have enough time to reach it's angle. But if it's too big, it will waste too much time.
-def MoveArmWithStallTimeDetection(arm, speed, angle):
+def MoveArmWithStallTimeDetection(arm, speed, angle, time):
     arm.reset_angle(0)
     arm.run(angle)
     watch = StopWatch()
     while abs(arm.angle() < abs(angle)):
-        if watch.time() > 700:
+        if watch.time() > time:
             break
     arm.hold()
 
