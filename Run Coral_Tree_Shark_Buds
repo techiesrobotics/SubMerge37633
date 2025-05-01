@@ -7,24 +7,35 @@ from TechiesArm import*
 from TechiesDriveBase import*
 hub = PrimeHub()
 
-SetSpeed(600)
+SetSpeed(300)
 
-MoveLeftArmUp(50, 40)
+MoveLeftArmUp(50, 50)
 MoveForward(175)
 MoveLeftArmDown(50, 30)
 MoveBackward(50)
-MoveLeftArmDown (70,65)
+MoveLeftArmDown (60, 80)
+TurnLeft(5)
 MoveForward(225)
 MoveLeftArmUp(50, 60)
 MoveBackward(200)
-MoveLeftArmDown(50,60)
-# Coral Reef and Shark
+TurnRight(5)
+MoveLeftArmDown(50, 60)
+
+#Coral Reef and Shark
+
 TurnRight(30)
 MoveForward(450)
 TurnLeft(120)
 SetSpeed(100)
-MoveForward(150)
+MoveForward(200)
 SetSpeed(600)
 MoveBackward(150)
 TurnRight(30)
-#unfinished, do not change yet
+MoveForward(300)
+
+#Head back to base
+
+MoveBackward(300)
+TurnLeft(90)
+SetSpeed(900)
+MoveForward(600)
