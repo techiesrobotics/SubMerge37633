@@ -9,11 +9,11 @@ hub = PrimeHub()
 
 SetSpeed(300)
 
-MoveLeftArmUp(50, 50)
-MoveForward(175)
+MoveLeftArmUp(70, 50)
+MoveForward(320)
 MoveLeftArmDown(50, 30)
 MoveBackward(50)
-MoveLeftArmDown (60, 80)
+MoveLeftArmDown (60, 81)
 TurnLeft(5)
 MoveForward(225)
 MoveLeftArmUp(50, 60)
@@ -24,13 +24,13 @@ MoveLeftArmDown(50, 60)
 #Coral Reef and Shark
 
 TurnRight(30)
-MoveForward(450)
+MoveForward(440)
 TurnLeft(120)
 SetSpeed(100)
 MoveForward(200)
-SetSpeed(600)
+SetSpeed(200)
 MoveBackward(150)
-TurnRight(30)
+TurnRight(35)
 MoveForward(300)
 
 #Head back to base
