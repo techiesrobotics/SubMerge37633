@@ -22,7 +22,7 @@ MoveLeftArmDown(50, 60)
 #Coral Reef and Shark
 
 TurnRight(30)
-MoveForward(435)
+MoveForward(420)
 TurnLeft(120)
 SetSpeed(100)
 MoveForward(200)
