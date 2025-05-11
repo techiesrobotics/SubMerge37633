@@ -3,15 +3,35 @@
 #       TechiesMaster.py      #
 #  This file starts the runs  #
 ###############################
+from pybricks.hubs import PrimeHub
+from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSensor
+from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
+from pybricks.robotics import DriveBase
+from pybricks.tools import wait, StopWatch
+
+hub = PrimeHub()
+
+###############################
+#        For team 37633       #
+#       TechiesMaster.py      #
+#  This file starts the runs  #
+###############################
 from TechiesDriveBase import *
+'''
 from Run_MastKrakenReefDiver import *
-from Run_CollectLeft import * #x
+from Run_CollectLeft import * 
 from Run_BudsDiverSharkReef import *
 from Run_LeftToRight import *
-from shippinglanes_octo_segments import *
-from sonar_submersible_fish import *
-from sonar_submersible_octo import *
-from submersible_octo import *
+''' 
+from shippinglanes_octo import *
+from feed_the_whale import *
+#from sonar_submersible_fish import *
+from sonar_submersible_angler_octo import *
+#from submersible_octo import *
+
+#need to add in feed the whale
+#remove mark ups after codes are updated (left)
+
 
 RED_HIGH = 365
 RED_LOW = 349
@@ -62,13 +82,13 @@ while True:
         # So we used the hue of the color to detect the colors more accurately.
         if(detectedHSV.h > LIGHT_BLUE_LOW and detectedHSV.h < LIGHT_BLUE_HIGH):
             print("==============LIGHT_BLUE, submersible_octo")
-            submersible_octo()
+            feedthewhale()
         if(detectedHSV.h > BLUE_LOW and detectedHSV.h < BLUE_HIGH):
-            print("==============BLUE, shippinglanes_octo_segments")
-            shippinglanes_octo_segments()
+            print("==============BLUE, shippinglanes_octo")
+            shippinglanes_octo()
         elif(detectedHSV.h > PURPLE_LOW and detectedHSV.h < PURPLE_HIGH):
             print("==============PURPLE, sonar_submersible_fish")
-            sonar_submersible_octo()
+            sonar_submersible_angler_octo()
         else:
             print("======================too close to tell")
     wait(100)
