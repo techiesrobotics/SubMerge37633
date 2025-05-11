@@ -1,35 +1,33 @@
 from TechiesDriveBase import *
 
 hub = PrimeHub()
-def FSIshippinglanes():
+
+def shippinglanes():
+    MoveForward(435)
+    TurnRight(25)
+    MoveForward(55)
+    wait(10)
+    MoveRightArmUp(200, 65)
+    TurnRight(30)
+    MoveBackward(140)
+    TurnRight(70)
+
+def octo():
+    MoveBackward(195)
     SetSpeed(900)
-    MoveForward(-455)
-    wait(8)
-    TurnRight(35)
-    MoveForward(20)
-    MoveForward(-45)
-    MoveRightArmUp(1000,65)
-    wait(4)
-    TurnRight(60)
+    MoveForward(400)
 
-def FSIunexpectedencounter():
-    TurnLeft(60)
-    MoveForward(150)
-    TurnRight(110)
-    MoveForward(240)
-    MoveBackward(400)
-    SetGyro(False)
-
-def FSIcoralsegments():
+'''
+def coralsegments():
     PauseMission()
     SetSpeed(100)
-    MoveForward(-40)
-    MoveBackward(-120)
+    MoveForward(40)
+    MoveBackward(120)
+'''
 
-def FSIshippinglanes_octo_segments():
-    FSIshippinglanes()
-    FSIunexpectedencounter()
-    FSIcoralsegments()
+def shippinglanes_octo():
+    shippinglanes()
+    octo()
+    #coralsegments()
 
-FSIshippinglanes_octo_segments()
-
+SHIPPING LANES
