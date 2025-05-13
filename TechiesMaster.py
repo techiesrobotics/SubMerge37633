@@ -5,7 +5,7 @@
 ###############################
 from TechiesDriveBase import *
 from Run_MastKrakenReefDiver import *
-from Run_CollectLeft import * #x
+from Run_CollectLeft import *
 from Run_BudsDiverSharkReef import *
 from Run_LeftToRight2 import *
 from sonar_submersible_fish import *
@@ -50,7 +50,7 @@ while True:
             Run_ArtificialHabitatAndResearchVessel()
         elif(detectedHSV.h > MAGENTA_LOW and detectedHSV.h < MAGENTA_HIGH):
             print("==============MAGENTA, Run_Habitat & sample to boat")
-            collectsamples()
+            collectSamples()
         else:
             print("Not Orange, Red, or Magenta")
             print(color_sensor_side.color())
