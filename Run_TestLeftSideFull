@@ -12,8 +12,7 @@ from TechiesDriveBase import *
 
 def HangCoralTree():
     SetSpeed(300)
-    MoveLeftArmUp(70, 50)
-    MoveForward(320)
+    MoveForward(350)
     MoveLeftArmDown(50, 30)
     MoveBackward(50)
     MoveLeftArmDown (60, 81)
@@ -83,6 +82,3 @@ def Do_MastKrakenReefDiver():
 
     
 Do_MastKrakenReefDiver()
-
-
-
