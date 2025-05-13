@@ -5,7 +5,7 @@ from pybricks.robotics import DriveBase
 from pybricks.tools import wait, StopWatch
 from TechiesDriveBase import *
 
-MoveForward(250)
+'''MoveForward(250)
 MoveRightArmUp(900,800)
 MoveForward(350)
 TurnRight(17)
@@ -23,6 +23,20 @@ TurnLeft(10)
 MoveForward(300)
 TurnLeft(60)
 MoveLeftArmUp(900,400)
-MoveForward(550)
+MoveForward(550)'''
 
-hub = PrimeHub()
+#Collects all the samples from right to left side
+def collectSamples():
+    MoveForward(775)
+    MoveBackward(10)
+    SetSpeed(400)
+    TurnRight(90)
+    MoveForward(120)
+    MoveBackward(100)
+    TurnLeft(180)
+    MoveForward(1200)
+    TurnLeft(75)
+    MoveForward(550)
+
+
+#collectSamples()
