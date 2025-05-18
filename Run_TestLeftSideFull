@@ -22,7 +22,7 @@ def HangCoralTree():
     MoveLeftArmDown(50, 90)
 
 #Coral Reef and Shark
-def BudsShark ():
+def BudsShark():
     TurnRight(30)
     MoveForward(420)
     TurnLeft(120)
@@ -40,7 +40,6 @@ def BudsShark ():
     SetSpeed(900)
     MoveForward(600)
     MoveLeftArmDown(200,45)
-    PauseMission()
 
 def mastKraken():
     #This function completes the "Raising the Mast" and "Kraken's Treasure" Missions
@@ -74,11 +73,11 @@ def hangDiverCoralBuds():
   
 
 def Do_MastKrakenReefDiver():
-    #This function calls both individual mission functions and combines them
-    HangCoralTree()
-    BudsShark()
     mastKraken()
     hangDiverCoralBuds()
 
-    
-Do_MastKrakenReefDiver()
+def Do_TreeBudsShark():
+    HangCoralTree()
+    BudsShark ()
+
+
