@@ -27,15 +27,25 @@ MoveForward(550)'''
 
 #Collects all the samples from right to left side
 def collectSamples():
-    MoveForward(775)
-    MoveBackward(10)
-    SetSpeed(400)
-    TurnRight(90)
-    MoveForward(120)
-    MoveBackward(100)
+    MoveForward(710)
+    TurnRight(35)
+    MoveForward(155)
+    MoveBackward(90)
+    SetSpeed(200)
+    TurnRight(55)
+    MoveForward(80)
+    MoveBackward(105)
     TurnLeft(180)
-    MoveForward(1200)
-    TurnLeft(75)
+    MoveForward(830)
+    TurnRight(90)
+    MoveForward(100)
+    MoveBackward(100)
+    TurnLeft(90)
+    MoveForward(70)
+    SetSpeed(300)
+    TurnLeft(10)
+    MoveForward(250)
+    TurnLeft(50)
     MoveForward(550)
 
 
