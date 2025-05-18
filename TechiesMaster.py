@@ -42,10 +42,10 @@ while True:
 
         if(detectedHSV.h > RED_LOW and detectedHSV.h < RED_HIGH):
             print("==============Red, Do_CollectLeft")
-            Do_TreeBudsShark
+            Do_TreeBudsShark()
         elif(detectedHSV.h > ORANGE_LOW and detectedHSV.h < ORANGE_HIGH):
             print("==============Orange, Do_BudsDiverSharkReef")
-            Run_ArtificialHabitatAndResearchVessel()
+            SamplesVesselHabitat()
         elif(detectedHSV.h > MAGENTA_LOW and detectedHSV.h < MAGENTA_HIGH):
             print("==============MAGENTA, Run_Habitat & sample to boat")
             collectSamples()
