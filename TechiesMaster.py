@@ -4,14 +4,14 @@
 #  This file starts the runs  #
 ###############################
 from TechiesDriveBase import *
-from Run_MastKrakenReefDiver import *
-from Run_CollectLeft import * #x
-from Run_BudsDiverSharkReef import *
-from Run_LeftToRight import *
-from shippinglanes_octo_segments import *
+from Run_CollectLeft import *
 from sonar_submersible_fish import *
-from sonar_submersible_octo import *
-from submersible_octo import *
+from Run_TestLeftSideFull import *
+from Run_ArtificialHabitatAndResearchVessel import *
+from Run_CollectSamples import *
+from shippinglanes_octo_segments import *
+from feedthewhale import *
+from tridentgray import *
 
 RED_HIGH = 365
 RED_LOW = 349
@@ -34,21 +34,21 @@ while True:
 
     if(detectedColor == Color.GREEN):
         print("==============Green, Run_LeftToRight2")
-        Run_LeftToRight()
+        trident()
 
     elif detectedColor == Color.RED:
-        # Pybricks's pre-defined colors mixes up red, ornage and magenta.
+        # Pybricks's pre-defined colors mixes up red, orange and magenta.
         # So we used the hue of the color to detect the colors more accurately.
 
         if(detectedHSV.h > RED_LOW and detectedHSV.h < RED_HIGH):
             print("==============Red, Do_CollectLeft")
-            Do_CollectLeftTree()
+            Do_TreeBudsShark
         elif(detectedHSV.h > ORANGE_LOW and detectedHSV.h < ORANGE_HIGH):
             print("==============Orange, Do_BudsDiverSharkReef")
-            Do_BudsDiverSharkReef()
+            Run_ArtificialHabitatAndResearchVessel()
         elif(detectedHSV.h > MAGENTA_LOW and detectedHSV.h < MAGENTA_HIGH):
             print("==============MAGENTA, Run_Habitat & sample to boat")
-            MoveRightArmDown(100, 90)
+            collectSamples()
         else:
             print("Not Orange, Red, or Magenta")
             print(color_sensor_side.color())
@@ -62,13 +62,13 @@ while True:
         # So we used the hue of the color to detect the colors more accurately.
         if(detectedHSV.h > LIGHT_BLUE_LOW and detectedHSV.h < LIGHT_BLUE_HIGH):
             print("==============LIGHT_BLUE, submersible_octo")
-            submersible_octo()
+            feedthewhale()
         if(detectedHSV.h > BLUE_LOW and detectedHSV.h < BLUE_HIGH):
             print("==============BLUE, shippinglanes_octo_segments")
-            shippinglanes_octo_segments()
+            shippinglanes_octo()
         elif(detectedHSV.h > PURPLE_LOW and detectedHSV.h < PURPLE_HIGH):
             print("==============PURPLE, sonar_submersible_fish")
-            sonar_submersible_octo()
+            sonar_submersible_angler_octo()
         else:
             print("======================too close to tell")
     wait(100)
