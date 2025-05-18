@@ -1,54 +1,59 @@
-##########################
-#     For team 37633     # 
-# sonar_submersible_fish #
-##########################
-
 from TechiesDriveBase import *
+from TechiesArm import *
 
-def sonardiscovery():
-    SetSpeed(450)
-    MoveForwardWithAccel(730, 300, 300)
-    TurnLeft(90)
-    MoveForward(245)
-    MoveRightArmUp(330, 215)
-    MoveBackward(190)
-
-def sendoversubmersible():
-    AccelDefaultReset()
-    TurnRight(30)
-    MoveBackward(100)
+hub = PrimeHub()
+def sonar():
+    MoveForward(635)
+    TurnLeft(47)
+    wait(20)
+    MoveForward(250)
+    TurnRight(28)
+    wait(45)
+    MoveBackward(90)
     TurnLeft(30)
-    MoveRightArmDown(450, 90)
-    run_task(DriveForwardAndMoveArm(340, left_arm, 210, -135))
-    TurnRight(45)
-    MoveForward(55)
-    wait(5)
-    StopAtWhite(290)
-    #DetectArmStall(left_arm, 500, 1500, 40)# The old angle was -15, TODO
-    MoveArmWithStallTimeDetection(left_arm, 500, 150)
-    print(left_arm.load())
-
-def anglerfish():
-    MoveBackward(280)
-    TurnLeft(53)
-    SetSpeed(330)
-    MoveForwardWithAccel(500, 1200, 1200)
-    TurnLeft(25)
-    MoveForward(135)
-    TurnLeft(35)
-    MoveForwardWithAccel(90, 1200, 1200)
+    wait(45)
+    TurnRight(17)
+    MoveForward(70)
+    TurnRight(13)
     wait(10)
-    MoveBackward(140)
+    TurnLeft(25)
+    MoveForward(30)
+    TurnLeft(55)
+    wait(100)
+    MoveBackward(50)
 
-def octopus():
+def submersible():
+    MoveForward(330)
+    MoveLeftArmUp(350, 380)
+    TurnRight(70)
+    StopAtBlack(60)
+    MoveForward(140)
+    MoveLeftArmDown(900, 230)
+    wait(10)
+    MoveLeftArmUp(320, 90)
+
+def angler():
+    MoveBackward(140)
     TurnRight(90)
-    MoveBackward(180)
+    TurnRight(20)
+    MoveBackward(280)
+    TurnLeft(45)
+    MoveBackward(50)
+    TurnLeft(35)
+    MoveBackward(20)
     
-def sonar_submersible_fish():
-    sonardiscovery()
-    sendoversubmersible()
-    anglerfish()
-    octopus()
+    
+
+def octo():
+    TurnRight(90)
+    MoveForward(190)
+    
+def sonar_submersible_angler_octo():
+    sonar()
+    submersible()
+    angler()
+    octo()
+#sonar_submersible_angler_octo()
 
 
 
