@@ -1,0 +1,18 @@
+from TechiesDriveBase import *
+
+hub = PrimeHub()
+
+#might need change some parts
+#not finished
+def feedthewhale():
+    MoveForward(737)
+    wait(30)
+    TurnRight(45)
+    wait(20)
+    SetSpeed(350)
+    MoveForward(190)
+    wait(400)
+    SetSpeed(730)
+    MoveBackward(240)
+    TurnLeft(53)
+    MoveBackward(700)
