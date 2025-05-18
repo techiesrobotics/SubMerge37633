@@ -69,18 +69,3 @@ def MoveArmWithStallTimeDetection(arm, speed, angle, time):
         if watch.time() > time:
             break
     arm.hold()
-
-#MoveLeftArmUp(100, 90)
-#MoveLeftArmDown(100, 90)
-
-#MoveRightArmUp(100,90)
-#MoveRightArmDown(100,90)
-
-#run_task(moveBothArmUp(100, 90))
-
-#MoveArmWithStallTimeDetection(right_arm, 200, 90)
-
-#MoveLeftArmDown(80, 170)
-#MoveLeftArmUp(80, 170)
-
-#MoveArmWithStallTimeDetection(right_arm, 150, -90)
