@@ -14,6 +14,7 @@ from Run_ArtificialHabitatAndResearchVessel import *
 from Run_CollectSamples import *
 from shippinglanes_octo_segments import *
 from feedthewhale import *
+from tridentGrey import *
 
 RED_HIGH = 365
 RED_LOW = 349
@@ -36,7 +37,7 @@ while True:
 
     if(detectedColor == Color.GREEN):
         print("==============Green, Run_LeftToRight2")
-        Run_LeftToRight()
+        tridentBoi()
 
     elif detectedColor == Color.RED:
         # Pybricks's pre-defined colors mixes up red, ornage and magenta.
