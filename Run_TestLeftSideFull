@@ -15,11 +15,11 @@ def HangCoralTree():
     MoveForward(350)
     MoveLeftArmDown(50, 30)
     MoveBackward(50)
-    MoveLeftArmDown (60, 81)
+    MoveLeftArmDown (60, 80)
     MoveForward(225)
     MoveLeftArmUp(50, 60)
     MoveBackward(200)
-    MoveLeftArmDown(50, 60)
+    MoveLeftArmDown(50, 90)
 
 #Coral Reef and Shark
 def BudsShark ():
