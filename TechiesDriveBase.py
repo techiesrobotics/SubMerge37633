@@ -29,7 +29,10 @@ def SetSpeed(speed):
     drive_base.settings(straight_speed=speed)
 
 def SetAccel(accelStraight, accelTurn):
-    drive_base.settings(straight_acceleration=accelStraight, turn_acceleration=accelTurn)
+    drive_base.settings(
+        straight_acceleration=accelStraight,
+        turn_acceleration=accelTurn
+    )
 
 def MoveForward(distance):
     drive_base.straight(distance)
@@ -58,6 +61,14 @@ def StopAtWhite(speed):
     print("reflection", color_sensor.reflection())
     drive_base.brake()
 
+def StopAtBlack(speed):
+    drive_base.drive(speed, 0)
+    print("reflection", color_sensor.reflection())
+    while(color_sensor.reflection() > 97):
+        wait(10)
+    print("reflection", color_sensor.reflection())
+    drive_base.brake()
+    
 def PauseMission():
     print("start pause mission")
     SetGyro(False)
